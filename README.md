@@ -9,6 +9,10 @@ A Jenkins job setup.
 Download Jenkins from here: http://jenkins-ci.org/content/thank-you-downloading-os-x-installer <br/>
 I would recommend that the install should be made under the administrator user and not let the Jenkins installer create it's own user. That will generate issues when trying to access the keychain.
 
+To run Jenkins go to `/Applications/Jenkins` and run the `jenkins.war` file. Make sure you have the latest Java JDK installed.
+
+After that, you can access the Jenkins Dashboard using the following URL: [http://localhost:8080](http://localhost:8080)
+
 ## Code metrics tools
 ##### Install Homebrew
 To install Homebrew, simply copy-paste this code into your Terminal and press enter:
