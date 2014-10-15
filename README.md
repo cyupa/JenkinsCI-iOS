@@ -20,6 +20,7 @@ To install Homebrew, simply copy-paste this code into your Terminal and press en
 <code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </code>
 
 ##### Installing pmd:<br/>`brew install pmd`
+To be able to make use of PMD you will also need to dowload the PMD Objective-C language definition from [here](https://github.com/jkennedy1980/Objective-C-CPD-Language/blob/master/releases/ObjCLanguage-0.0.7-SNAPSHOT.jar) - courtesy of Josh Kennedy.
 
 ##### Installing sloccount:<br/>`brew install sloccount`
 
