@@ -13,6 +13,42 @@ To run Jenkins go to `/Applications/Jenkins` and run the `jenkins.war` file. Mak
 
 After that, you can access the Jenkins Dashboard using the following URL: [http://localhost:8080](http://localhost:8080)
 
+## XCode project setup
+
+First, go to your project target from the left top corner of XCode, click on the target and select "Manage Schemes".
+There you should check the "Shared" option for your XCode project (do not check shared for the Pods project).<br/>
+Target - > Manage schemes - > Check “Shared”
+
+Then, in the project's Build Settings turn on Generate Test Coverage Files and Instrument Program Flow for the Debug configuration on your main target and for both Debug an Release for your test target.
+
+In your AppDelegate.h you should add the following lines:
+```C
+#ifdef DEBUG
+    FILE *fopen$UNIX2003(const char *filename, const char *mode);
+    size_t fwrite$UNIX2003(const void *ptr, size_t size, size_t nitems, FILE *stream);
+#endif
+```
+While in your AppDelegate.m you should add these:
+```C
+#ifdef DEBUG
+FILE *fopen$UNIX2003(const char *filename, const char *mode) {
+    return fopen(filename, mode);
+}
+ 
+size_t fwrite$UNIX2003(const void *ptr, size_t size, size_t nitems, FILE *stream) {
+    return fwrite(ptr, size, nitems, stream);
+}
+#endif
+```
+This is because of a bug in Xcode that doesn't recognize those functions when generating the code coverage files.
+
+To check if everything it's OK you can build the project you can check the following folders for .gcna and .gcno files
+`Build/Intermediates/YOUR-TEST-TARGET-NAME.build/Objects-normal/i386'`
+and
+`Build/Intermediates/YOUR-MAIN-TARGET-NAME.build/Objects-normal/i386'`
+You can find these based on the setting you have in Xcode for Locations.
+
+
 ## Code metrics tools
 ##### Install Homebrew
 To install Homebrew, simply copy-paste this code into your Terminal and press enter:
