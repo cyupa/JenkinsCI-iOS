@@ -4,7 +4,7 @@ JenkinsCI-iOS
 A Jenkins job setup.
 
 
-## Jenkins
+## Installing Jenkins
 
 Download Jenkins from here: http://jenkins-ci.org/content/thank-you-downloading-os-x-installer <br/>
 I would recommend that the install should be made under the administrator user and not let the Jenkins installer create it's own user. That will generate issues when trying to access the keychain.
@@ -42,7 +42,7 @@ size_t fwrite$UNIX2003(const void *ptr, size_t size, size_t nitems, FILE *stream
 ```
 This is because of a bug in Xcode that doesn't recognize those functions when generating the code coverage files.
 
-To check if everything it's OK you can build the project you can check the following folders for .gcna and .gcno files
+To check if everything it's OK you can build the project and check the following folders for .gcno and .gcda files
 `Build/Intermediates/YOUR-TEST-TARGET-NAME.build/Objects-normal/i386'`
 and
 `Build/Intermediates/YOUR-MAIN-TARGET-NAME.build/Objects-normal/i386'`
