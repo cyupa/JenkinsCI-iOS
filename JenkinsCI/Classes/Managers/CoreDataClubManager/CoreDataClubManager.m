@@ -26,7 +26,10 @@
     clubObject.stadiumName = stadiumName;
     
     return clubObject;
-    
+}
+
+- (void)deleteClub:(Club *)club {
+    [self deleteObject:club];
 }
 
 @end

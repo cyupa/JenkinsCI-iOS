@@ -22,4 +22,11 @@
 - (Club *)createClubWithName:(NSString *)clubName
                  stadiumName:(NSString *)stadiumName;
 
+/**
+ *  Deletes a club from its managed object context.
+ *
+ *  @param club Club object.
+ */
+- (void)deleteClub:(Club *)club;
+
 @end

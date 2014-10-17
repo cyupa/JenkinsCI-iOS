@@ -28,7 +28,6 @@
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     __strong static id _sharedObject = nil;
-
     dispatch_once(&onceToken, ^{
         _sharedObject = [[self alloc] init];
     });
@@ -113,6 +112,16 @@
     return fetchedResultsController;
 }
 
+/**
+ *  Creates a NSFetchRequest with a given entity name, predicate and sorting key.
+ *
+ *  @param entityName The entity name of the fetched objects.
+ *  @param predicate  The fetch predicate.
+ *  @param sortingKey The sorting key.
+ *  @param ascending  YES - Ascending.
+ *
+ *  @return NSFetchRequest instance.
+ */
 - (NSFetchRequest *)fetchRequestWithEntityName:(NSString *)entityName
                                      predicate:(NSPredicate *)predicate
                                     sortingKey:(NSString *)sortingKey
@@ -127,6 +136,7 @@
     
     return fetchRequest;
 }
+
 
 #pragma mark - CoreData stack
 
@@ -159,7 +169,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Doozy" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"JenkinsCI" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -169,7 +179,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Doozy.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"JenkinsCI.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

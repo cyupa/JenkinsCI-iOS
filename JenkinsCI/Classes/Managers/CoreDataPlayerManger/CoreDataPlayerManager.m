@@ -28,4 +28,8 @@
     return playerObject;
 }
 
+- (void)deletePlayer:(Player *)player {
+    [self deleteObject:player];
+}
+
 @end
