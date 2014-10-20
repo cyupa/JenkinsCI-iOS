@@ -27,3 +27,9 @@
 - (void)removeSquad:(NSSet *)values;
 
 @end
+
+@interface Club (Additions)
+
+- (UIImage *)logoImage;
+
+@end

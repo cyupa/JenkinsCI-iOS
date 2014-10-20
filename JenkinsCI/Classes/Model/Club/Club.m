@@ -8,7 +8,7 @@
 
 #import "Club.h"
 #import "Player.h"
-
+#import <UIKit/UIKit.h>
 
 @implementation Club
 
@@ -16,5 +16,15 @@
 @dynamic stadiumName;
 @dynamic clubId;
 @dynamic squad;
+
+@end
+
+@implementation Club (Additions)
+
+- (UIImage *)logoImage {
+    NSString *strippedString = [self.clubName stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+    NSString *imageName = [NSString stringWithFormat:@"%@-logo", strippedString];
+    return [UIImage imageNamed:imageName];
+}
 
 @end

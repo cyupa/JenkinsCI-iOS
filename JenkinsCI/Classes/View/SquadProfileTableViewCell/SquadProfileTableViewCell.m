@@ -7,11 +7,16 @@
 //
 
 #import "SquadProfileTableViewCell.h"
+#import "UIImageView+RoundCorners.h"
 
 @implementation SquadProfileTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    CGFloat width = CGRectGetWidth(self.playerPictureView.frame);
+    [self.playerPictureView applyCornerRadius:width/2
+                                  borderWidth:1.0
+                                  borderColor:[UIColor darkGrayColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

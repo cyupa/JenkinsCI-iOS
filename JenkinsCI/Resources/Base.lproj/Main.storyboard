@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -28,37 +29,68 @@
         <scene sceneID="p7L-kR-P1Q">
             <objects>
                 <tableViewController id="XPd-eO-0lq" customClass="PlayersViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gMv-fL-Pmv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="gMv-fL-Pmv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="_playerCell" rowHeight="75" id="Hge-hb-9EL" customClass="PlayerTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hge-hb-9EL" id="wez-bc-nu2">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steven Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shc-4k-dKv">
-                                            <rect key="frame" x="76" y="8" width="140" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steven Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shc-4k-dKv">
+                                            <rect key="frame" x="76" y="9" width="483" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="xBp-57-pFy"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liverpool FC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6O-j8-8xc">
-                                            <rect key="frame" x="76" y="46" width="150" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liverpool FC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6O-j8-8xc">
+                                            <rect key="frame" x="76" y="47" width="130" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="Ve6-ne-bop"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="steven_gerrard" translatesAutoresizingMaskIntoConstraints="NO" id="jUD-cY-VvI">
-                                            <rect key="frame" x="8" y="9" width="60" height="60"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midfielder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e30-1w-R40">
+                                            <rect key="frame" x="214" y="48" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="R7D-5A-pKJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angel_di_maria" translatesAutoresizingMaskIntoConstraints="NO" id="jUD-cY-VvI">
+                                            <rect key="frame" x="8" y="8" width="60" height="59"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Ag7-ZJ-g9O"/>
+                                                <constraint firstAttribute="height" constant="60" id="yKU-El-Gqh"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="yKU-El-Gqh"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Midfielder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e30-1w-R40">
-                                            <rect key="frame" x="234" y="47" width="76" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e30-1w-R40" firstAttribute="top" secondItem="shc-4k-dKv" secondAttribute="bottom" constant="15" id="3Ke-uJ-Zq1"/>
+                                        <constraint firstItem="shc-4k-dKv" firstAttribute="leading" secondItem="jUD-cY-VvI" secondAttribute="trailing" constant="8" symbolic="YES" id="4p8-GG-KF7"/>
+                                        <constraint firstAttribute="bottom" secondItem="jUD-cY-VvI" secondAttribute="bottom" constant="7" id="6Lj-ql-YuF"/>
+                                        <constraint firstItem="e30-1w-R40" firstAttribute="leading" secondItem="wez-bc-nu2" secondAttribute="leading" constant="214" id="HJ0-Y8-bBT"/>
+                                        <constraint firstItem="e30-1w-R40" firstAttribute="leading" secondItem="n6O-j8-8xc" secondAttribute="trailing" constant="8" symbolic="YES" id="JMg-he-ItM"/>
+                                        <constraint firstItem="jUD-cY-VvI" firstAttribute="bottom" secondItem="n6O-j8-8xc" secondAttribute="bottom" id="UMa-M1-PH2"/>
+                                        <constraint firstItem="jUD-cY-VvI" firstAttribute="leading" secondItem="wez-bc-nu2" secondAttribute="leading" constant="8" id="Zl8-mQ-Oty"/>
+                                        <constraint firstAttribute="trailing" secondItem="shc-4k-dKv" secondAttribute="trailing" constant="8" id="bOf-F4-lhF"/>
+                                        <constraint firstItem="n6O-j8-8xc" firstAttribute="leading" secondItem="jUD-cY-VvI" secondAttribute="trailing" constant="8" symbolic="YES" id="nTB-3k-9YN"/>
+                                        <constraint firstItem="n6O-j8-8xc" firstAttribute="top" secondItem="shc-4k-dKv" secondAttribute="bottom" constant="14" id="p46-gT-ZzM"/>
+                                        <constraint firstItem="jUD-cY-VvI" firstAttribute="top" secondItem="wez-bc-nu2" secondAttribute="top" constant="8" id="x7R-8H-Z8z"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="clubNameLabel" destination="n6O-j8-8xc" id="FkD-gp-yNG"/>
@@ -84,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qih-dM-9cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="-598"/>
+            <point key="canvasLocation" x="1252" y="-601"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MO6-JH-IfF">
@@ -216,69 +248,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-i6-nOq">
-                                <rect key="frame" x="16" y="72" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-i6-nOq">
+                                <rect key="frame" x="16" y="72" width="178" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D7o-i6-nOq" secondAttribute="height" multiplier="1:1" id="Pvd-nn-wcT"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="178" id="eJo-KK-0fx"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="178" id="m3i-hT-0My"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steven" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdO-JI-8Z5">
-                                <rect key="frame" x="16" y="295" width="568" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steven" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdO-JI-8Z5">
+                                <rect key="frame" x="16" y="257" width="568" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dur-Zq-5cd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyS-Uk-ihg">
-                                <rect key="frame" x="16" y="280" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKl-WH-jOi">
-                                <rect key="frame" x="16" y="326" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No. 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-3s-72e">
-                                <rect key="frame" x="224" y="72" width="360" height="84"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. 78" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-3s-72e">
+                                <rect key="frame" x="202" y="72" width="382" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jka-SD-bhc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liverpool FC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLg-I7-zYR">
-                                <rect key="frame" x="263" y="160" width="321" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liverpool FC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="527" translatesAutoresizingMaskIntoConstraints="NO" id="gLg-I7-zYR">
+                                <rect key="frame" x="54" y="348" width="526" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="GSa-C0-n4M"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="526" id="KSB-v2-ai1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sV-pv-1fb">
-                                <rect key="frame" x="224" y="142" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sV-pv-1fb">
+                                <rect key="frame" x="16" y="332" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="75m-Wp-aRu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHG-Ps-Vvb">
-                                <rect key="frame" x="224" y="209" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHG-Ps-Vvb">
+                                <rect key="frame" x="16" y="387" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3Dj-Mm-7R8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Liverpool-FC-logo" translatesAutoresizingMaskIntoConstraints="NO" id="CQu-Yh-chj">
-                                <rect key="frame" x="224" y="166" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Liverpool-FC-logo" translatesAutoresizingMaskIntoConstraints="NO" id="CQu-Yh-chj">
+                                <rect key="frame" x="16" y="354" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KMx-Vg-TBE"/>
+                                    <constraint firstAttribute="height" constant="30" id="pG4-3B-2Pk"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Midfielder" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYp-gP-RWn">
-                                <rect key="frame" x="224" y="230" width="360" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midfielder" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="360" translatesAutoresizingMaskIntoConstraints="NO" id="SYp-gP-RWn">
+                                <rect key="frame" x="16" y="406" width="568" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="wbs-cl-3NV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-dL-cfV">
-                                <rect key="frame" x="16" y="341" width="568" height="33"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-dL-cfV">
+                                <rect key="frame" x="16" y="291" width="568" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="ek6-SH-ePo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1sV-pv-1fb" secondAttribute="trailing" constant="16" id="1Xt-Zg-fcR"/>
+                            <constraint firstItem="D7o-i6-nOq" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="5td-4Z-8T5"/>
+                            <constraint firstItem="CHG-Ps-Vvb" firstAttribute="top" secondItem="CQu-Yh-chj" secondAttribute="bottom" constant="3" id="6v7-Q2-LS0"/>
+                            <constraint firstItem="SYp-gP-RWn" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="9mf-Qj-Igy"/>
+                            <constraint firstItem="1sV-pv-1fb" firstAttribute="top" secondItem="Nfr-dL-cfV" secondAttribute="bottom" constant="8" id="C7n-Rl-PKG"/>
+                            <constraint firstItem="gLg-I7-zYR" firstAttribute="leading" secondItem="CQu-Yh-chj" secondAttribute="trailing" constant="8" id="DWx-6d-7Ab"/>
+                            <constraint firstAttribute="trailing" secondItem="gLg-I7-zYR" secondAttribute="trailing" constant="20" id="GLA-nT-sz0"/>
+                            <constraint firstAttribute="trailing" secondItem="CHG-Ps-Vvb" secondAttribute="trailing" constant="16" id="KXN-6t-Fd0"/>
+                            <constraint firstItem="CQu-Yh-chj" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="Lki-Pv-sAd"/>
+                            <constraint firstItem="1sV-pv-1fb" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="Njs-eN-x4z"/>
+                            <constraint firstItem="vdO-JI-8Z5" firstAttribute="top" secondItem="IQQ-3s-72e" secondAttribute="bottom" constant="7" id="U4G-fn-WYx"/>
+                            <constraint firstAttribute="trailing" secondItem="Nfr-dL-cfV" secondAttribute="trailing" constant="16" id="Uft-Gk-Ugm"/>
+                            <constraint firstItem="SYp-gP-RWn" firstAttribute="top" secondItem="gLg-I7-zYR" secondAttribute="bottom" constant="17" id="VpY-ju-lYs"/>
+                            <constraint firstItem="CQu-Yh-chj" firstAttribute="top" secondItem="1sV-pv-1fb" secondAttribute="bottom" constant="1" id="cDE-1j-Amd"/>
+                            <constraint firstItem="IQQ-3s-72e" firstAttribute="top" secondItem="F5N-ch-yhR" secondAttribute="bottom" constant="8" id="cys-Rr-ryv"/>
+                            <constraint firstItem="Nfr-dL-cfV" firstAttribute="top" secondItem="vdO-JI-8Z5" secondAttribute="bottom" constant="1" id="f5C-Kn-oF0"/>
+                            <constraint firstItem="CHG-Ps-Vvb" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="g5o-62-quM"/>
+                            <constraint firstAttribute="trailing" secondItem="SYp-gP-RWn" secondAttribute="trailing" constant="16" id="gOZ-0e-dHP"/>
+                            <constraint firstAttribute="trailing" secondItem="vdO-JI-8Z5" secondAttribute="trailing" constant="16" id="gjH-AS-bLy"/>
+                            <constraint firstItem="gLg-I7-zYR" firstAttribute="top" secondItem="Nfr-dL-cfV" secondAttribute="bottom" constant="24" id="hXa-tm-w57"/>
+                            <constraint firstItem="D7o-i6-nOq" firstAttribute="height" secondItem="IQQ-3s-72e" secondAttribute="height" id="jcg-xB-v1b"/>
+                            <constraint firstItem="D7o-i6-nOq" firstAttribute="top" secondItem="F5N-ch-yhR" secondAttribute="bottom" constant="8" id="lvb-9N-Kc7"/>
+                            <constraint firstItem="Nfr-dL-cfV" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="mCt-Tu-7bA"/>
+                            <constraint firstAttribute="trailing" secondItem="IQQ-3s-72e" secondAttribute="trailing" constant="16" id="w4i-P1-ZnY"/>
+                            <constraint firstItem="IQQ-3s-72e" firstAttribute="leading" secondItem="D7o-i6-nOq" secondAttribute="trailing" constant="8" id="xyi-nU-Z09"/>
+                            <constraint firstItem="vdO-JI-8Z5" firstAttribute="leading" secondItem="rrM-oc-7hn" secondAttribute="leading" constant="16" id="yYE-HK-rWd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clubLogoImageView" destination="CQu-Yh-chj" id="FSf-hl-gJv"/>
+                        <outlet property="clubNameLabel" destination="gLg-I7-zYR" id="gLw-Zc-dTk"/>
+                        <outlet property="playerAvatarImageView" destination="D7o-i6-nOq" id="Xyj-sp-T9C"/>
+                        <outlet property="playerFirstNameLabel" destination="vdO-JI-8Z5" id="xfR-3p-iep"/>
+                        <outlet property="playerLastNameLabel" destination="Nfr-dL-cfV" id="kke-gS-JLZ"/>
+                        <outlet property="playerNumberLabel" destination="IQQ-3s-72e" id="zhC-Sj-dzn"/>
+                        <outlet property="playerPositionLabel" destination="SYp-gP-RWn" id="zMq-61-WXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6j-CW-B2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,7 +393,7 @@
         <scene sceneID="OyK-d0-bbh">
             <objects>
                 <tableViewController id="EPJ-Yb-lSD" customClass="ClubsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="QxE-fH-UMJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="QxE-fH-UMJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,7 +403,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O8O-jc-pl0" id="K6d-Cw-Tuc">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Liverpool-FC-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5t1-W7-Kaf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Liverpool-FC-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5t1-W7-Kaf">
                                             <rect key="frame" x="8" y="2" width="60" height="60"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liverpool" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icu-SY-6e0">
@@ -326,7 +414,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klU-iM-GHw">
                                             <rect key="frame" x="76" y="38" width="483" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.23529413339999999" green="0.23529413339999999" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -355,34 +443,34 @@
         <scene sceneID="ZUv-q3-eR4">
             <objects>
                 <tableViewController id="f6j-wb-faK" customClass="SquadViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hyb-wF-2cL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="hyb-wF-2cL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="_squadProfileCell" rowHeight="70" id="meg-rI-Emj" customClass="SquadProfileTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="meg-rI-Emj" id="OJJ-8P-3ut">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="steven_gerrard" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-8v-H7E">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="angel_di_maria" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-8v-H7E">
                                             <rect key="frame" x="57" y="5" width="60" height="60"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Midfielder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-6v-1io">
                                             <rect key="frame" x="125" y="39" width="396" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steven Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f8-b5-kxp">
-                                            <rect key="frame" x="125" y="11" width="396" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-Kj-IBG">
                                             <rect key="frame" x="8" y="10" width="41" height="53"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steven Gerrard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f8-b5-kxp">
+                                            <rect key="frame" x="125" y="10" width="396" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -427,12 +515,12 @@
     </scenes>
     <resources>
         <image name="Liverpool-FC-logo" width="256" height="256"/>
+        <image name="angel_di_maria" width="240" height="311"/>
         <image name="persons" width="25" height="25"/>
         <image name="player_placeholder" width="300" height="300"/>
         <image name="stadium" width="25" height="25"/>
-        <image name="steven_gerrard" width="263" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AQ9-Ma-cmi"/>
+        <segue reference="hqL-tb-EEn"/>
     </inferredMetricsTieBreakers>
 </document>

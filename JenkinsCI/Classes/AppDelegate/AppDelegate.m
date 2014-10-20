@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "DataImporter.h"
+
+
+static NSString * const kJSonFileName = @"db";
+static NSString * const kJSonFileType = @"json";
 
 @interface AppDelegate ()
 
@@ -17,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Checks if the import has been done and if not imports the data
+    [self checkImport];
+    
     return YES;
 }
 
@@ -40,6 +49,25 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Import
+
+- (void)checkImport {
+    DataImporter *importer = [[DataImporter alloc] init];
+    if (![importer didImportData]) {
+        NSDictionary *jsonData = [self jsonFileData];
+        [importer importDataFromDictionary:jsonData];
+    }
+}
+
+- (NSDictionary *)jsonFileData {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:kJSonFileName
+                                                         ofType:kJSonFileType];
+    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    return jsonData;
 }
 
 @end

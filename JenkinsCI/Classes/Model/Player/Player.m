@@ -8,7 +8,7 @@
 
 #import "Player.h"
 #import "Club.h"
-
+#import <UIKit/UIKit.h>
 
 @implementation Player
 
@@ -18,5 +18,20 @@
 @dynamic playerId;
 @dynamic shirtNumber;
 @dynamic club;
+
+@end
+
+@implementation Player (Additions)
+
+
+- (NSString *)playerFullName {
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
+
+- (UIImage *)playerImage {
+    NSString *strippedName = [[[self playerFullName] lowercaseString] stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    return [UIImage imageNamed:strippedName];
+}
+
 
 @end

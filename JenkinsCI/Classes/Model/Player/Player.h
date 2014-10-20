@@ -21,3 +21,10 @@
 @property (nonatomic, retain) Club *club;
 
 @end
+
+@interface Player (Additions)
+
+- (NSString *)playerFullName;
+- (UIImage *)playerImage;
+
+@end
