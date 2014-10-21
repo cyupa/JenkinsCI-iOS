@@ -21,6 +21,9 @@ Target - > Manage schemes - > Check “Shared”
 
 Then, in the project's Build Settings turn on Generate Test Coverage Files and Instrument Program Flow for the Debug configuration on your main target and for both Debug an Release for your test target.
 
+To take advantage of the generated files you need to set the Build Products and Intermediates to be saved in a folder relative to the Workspace. You can do this by accessing XCode Preferences -> Locations -> Custom -> Relative to Workspace.
+
+
 In your AppDelegate.h you should add the following lines:
 ```C
 #ifdef DEBUG
