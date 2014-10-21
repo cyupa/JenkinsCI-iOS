@@ -12,7 +12,7 @@
 @implementation CoreDataClubManager
 
 - (Club *)createClubWithName:(NSString *)clubName
-                      clubId:(NSNumber *)clubId
+                 stadiumName:(NSString *)stadiumName
 {
     // Get the club class name
     NSString *clubClassName = NSStringFromClass([Club class]);
@@ -23,13 +23,10 @@
                                                                onContext:context];
     // Set it's properties
     clubObject.clubName = clubName;
-    clubObject.clubId = clubId;
+    clubObject.stadiumName = stadiumName;
     
     return clubObject;
-}
-
-- (void)deleteClub:(Club *)club {
-    [self deleteObject:club];
+    
 }
 
 @end

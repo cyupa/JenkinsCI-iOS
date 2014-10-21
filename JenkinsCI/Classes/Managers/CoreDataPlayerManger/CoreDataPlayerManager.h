@@ -22,7 +22,4 @@
 - (Player *)createPlayerWithFirstName:(NSString *)firstName
                              lastName:(NSString *)lastName;
 
-
-- (void)deletePlayer:(Player *)player;
-
 @end
