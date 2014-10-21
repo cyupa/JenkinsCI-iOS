@@ -28,7 +28,6 @@
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     __strong static id _sharedObject = nil;
-
     dispatch_once(&onceToken, ^{
         _sharedObject = [[self alloc] init];
     });
@@ -69,14 +68,14 @@
 
 - (NSArray *)fetchObjectsWithEntityName:(NSString *)entityName
                               predicate:(NSPredicate *)predicate
-                             sortingKey:(NSString *)sortingKey
+                            sortingKeys:(NSArray *)sortingKeys
                               ascending:(BOOL)ascending
 {
     
     // Create a fetch request with a specific entity
     NSFetchRequest *fetchRequest = [self fetchRequestWithEntityName:entityName
                                                           predicate:predicate
-                                                         sortingKey:sortingKey
+                                                        sortingKeys:sortingKeys
                                                           ascending:ascending];
     NSError *error = nil;
     NSArray *fetchedObjects = [self.mainManagedObjectContext executeFetchRequest:fetchRequest error:&error];
@@ -89,44 +88,56 @@
 
 - (NSFetchedResultsController *)fetchedResultsControllerWithEntityName:(NSString *)entityName
                                                              predicate:(NSPredicate *)predicate
-                                                            sortingKey:(NSString *)sortingKey
+                                                           sortingKeys:(NSArray *)sortingKeys
+                                                        sectionNameKey:(NSString *)sectionKey
                                                              ascending:(BOOL)ascending
                                                               delegate:(id<NSFetchedResultsControllerDelegate>)delegate
 {
     
     NSFetchRequest *fetchRequest = [self fetchRequestWithEntityName:entityName
                                                           predicate:predicate
-                                                         sortingKey:sortingKey
+                                                        sortingKeys:sortingKeys
                                                           ascending:ascending];
     
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                                managedObjectContext:self.mainManagedObjectContext
-                                                                                                 sectionNameKeyPath:nil
+                                                                                                 sectionNameKeyPath:sectionKey
                                                                                                           cacheName:nil];
     fetchedResultsController.delegate = delegate;
-    
-    NSError *error = nil;
-    if (![fetchedResultsController performFetch:&error]) {
-        NSLog(@"Error: %@", error);
-    }
     
     return fetchedResultsController;
 }
 
+/**
+ *  Creates a NSFetchRequest with a given entity name, predicate and sorting key.
+ *
+ *  @param entityName The entity name of the fetched objects.
+ *  @param predicate  The fetch predicate.
+ *  @param sortingKey The sorting key.
+ *  @param ascending  YES - Ascending.
+ *
+ *  @return NSFetchRequest instance.
+ */
 - (NSFetchRequest *)fetchRequestWithEntityName:(NSString *)entityName
                                      predicate:(NSPredicate *)predicate
-                                    sortingKey:(NSString *)sortingKey
+                                    sortingKeys:(NSArray *)sortingKeys
                                      ascending:(BOOL)ascending
 {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:entityName];
     fetchRequest.predicate = predicate;
+    NSMutableArray *sortingDescriptors = [NSMutableArray arrayWithCapacity:[sortingKeys count]];
+    // Create the sort descriptors
+    for (NSString *sortingKey in sortingKeys) {
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:sortingKey ascending:ascending];
+        [sortingDescriptors addObject:sortDescriptor];
+    }
     
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:sortingKey ascending:ascending];
-    fetchRequest.sortDescriptors = @[sortDescriptor];
+    fetchRequest.sortDescriptors = sortingDescriptors;
     fetchRequest.returnsObjectsAsFaults = NO;
     
     return fetchRequest;
 }
+
 
 #pragma mark - CoreData stack
 
@@ -159,7 +170,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Doozy" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -169,7 +180,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Doozy.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"JenkinsCI.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

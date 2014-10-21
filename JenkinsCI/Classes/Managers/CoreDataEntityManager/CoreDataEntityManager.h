@@ -15,6 +15,20 @@
 @interface CoreDataEntityManager : NSObject
 
 /**
+ *  The NSManagedObjectContext on which the CoreDataEntityManager instace will operate on.
+ */
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+
+/**
+ *  Designated initializer.
+ *
+ *  @param context Instantiates a CoreDataEntityManager with a given context.
+ *
+ *  @return CoreDataEntityManager instance.
+ */
+- (instancetype)initWithContext:(NSManagedObjectContext *)context;
+
+/**
  *  Creates a NSManagedObject with a given entity name on the passed NSManagedObjectContext.
  *
  *  @param entityName NSString representing a valid entity name.
@@ -24,5 +38,12 @@
  */
 - (NSManagedObject *)createNSManagedObjectWithEntityName:(NSString *)entityName
                                                onContext:(NSManagedObjectContext *)context;
+
+/**
+ *  Deletes an object from its managed object context.
+ *
+ *  @param object The NSManagedObject instance to be deleted;
+ */
+- (void)deleteObject:(NSManagedObject *)object;
 
 @end

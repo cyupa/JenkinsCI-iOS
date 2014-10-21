@@ -10,11 +10,29 @@
 
 @implementation CoreDataEntityManager
 
+- (instancetype)initWithContext:(NSManagedObjectContext *)context {
+    
+    NSAssert((context != nil && [context isKindOfClass:[NSManagedObjectContext class]]),
+             @"The NSManagedObjectContext must not be nil or of any other type.");
+    
+    if (self = [super init]) {
+        // Set the managed object context
+        _managedObjectContext = context;
+    }
+    
+    return self;
+}
+
 - (NSManagedObject *)createNSManagedObjectWithEntityName:(NSString *)entityName
                                                onContext:(NSManagedObjectContext *)context
 {
     return [NSEntityDescription insertNewObjectForEntityForName:entityName
                                          inManagedObjectContext:context];
+}
+
+- (void)deleteObject:(NSManagedObject *)object {
+    NSManagedObjectContext *context = object.managedObjectContext;
+    [context deleteObject:object];
 }
 
 @end

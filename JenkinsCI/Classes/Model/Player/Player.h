@@ -2,7 +2,7 @@
 //  Player.h
 //  JenkinsCI
 //
-//  Created by Ciprian Redinciuc on 14/10/14.
+//  Created by Ciprian Redinciuc on 17/10/14.
 //  Copyright (c) 2014 Ciprian Redinciuc. All rights reserved.
 //
 
@@ -16,6 +16,15 @@
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * lastName;
 @property (nonatomic, retain) NSString * position;
+@property (nonatomic, retain) NSNumber * playerId;
+@property (nonatomic, retain) NSNumber * shirtNumber;
 @property (nonatomic, retain) Club *club;
+
+@end
+
+@interface Player (Additions)
+
+- (NSString *)playerFullName;
+- (UIImage *)playerImage;
 
 @end

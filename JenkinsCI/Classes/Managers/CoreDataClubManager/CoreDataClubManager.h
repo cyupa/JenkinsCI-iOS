@@ -15,11 +15,18 @@
  *  Method that creates a Club with a given name and stadium name.
  *
  *  @param clubName    The club name.
- *  @param stadiumName The stadium name.
+ *  @param clubId      The club id.
  *
  *  @return Club instance.
  */
 - (Club *)createClubWithName:(NSString *)clubName
-                 stadiumName:(NSString *)stadiumName;
+                      clubId:(NSNumber *)clubId;
+
+/**
+ *  Deletes a club from its managed object context.
+ *
+ *  @param club Club object.
+ */
+- (void)deleteClub:(Club *)club;
 
 @end
