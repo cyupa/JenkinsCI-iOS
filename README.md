@@ -24,27 +24,6 @@ Then, in the project's Build Settings turn on Generate Test Coverage Files and I
 To take advantage of the generated files you need to set the Build Products and Intermediates to be saved in a folder relative to the Workspace. You can do this by accessing XCode Preferences -> Locations -> Custom -> Relative to Workspace.
 
 
-In your AppDelegate.h you should add the following lines:
-```C
-#ifdef DEBUG
-    FILE *fopen$UNIX2003(const char *filename, const char *mode);
-    size_t fwrite$UNIX2003(const void *ptr, size_t size, size_t nitems, FILE *stream);
-#endif
-```
-While in your AppDelegate.m you should add these:
-```C
-#ifdef DEBUG
-FILE *fopen$UNIX2003(const char *filename, const char *mode) {
-    return fopen(filename, mode);
-}
- 
-size_t fwrite$UNIX2003(const void *ptr, size_t size, size_t nitems, FILE *stream) {
-    return fwrite(ptr, size, nitems, stream);
-}
-#endif
-```
-This is because of a bug in Xcode that doesn't recognize those functions when generating the code coverage files.
-
 To check if everything it's OK you can build the project and check the following folders for .gcno and .gcda files
 `Build/Intermediates/YOUR-TEST-TARGET-NAME.build/Objects-normal/i386'`
 and
