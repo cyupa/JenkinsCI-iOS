@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		095BD0C39A534402AFBD25EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C8313478FA4A82ACF5C4CF /* libPods.a */; };
-		D65A005219F7ECA30065E127 /* CoreDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A005119F7ECA30065E127 /* CoreDataManagerTests.m */; };
+		D65A005519F7F7D10065E127 /* CoreDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A005419F7F7D10065E127 /* CoreDataManagerTests.m */; };
 		D68B6F4619F153B100F3B87B /* ClubTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F4519F153B100F3B87B /* ClubTableViewCell.m */; };
 		D68B6F4919F153BE00F3B87B /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F4819F153BE00F3B87B /* PlayerTableViewCell.m */; };
 		D68B6F4C19F153CC00F3B87B /* SquadProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F4B19F153CC00F3B87B /* SquadProfileTableViewCell.m */; };
@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		ACCD67717136023307EF49F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1340D09FDAC86B4F813599B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D65A005119F7ECA30065E127 /* CoreDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManagerTests.m; sourceTree = "<group>"; };
+		D65A005419F7F7D10065E127 /* CoreDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManagerTests.m; sourceTree = "<group>"; };
 		D68B6F4419F153B100F3B87B /* ClubTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubTableViewCell.h; sourceTree = "<group>"; };
 		D68B6F4519F153B100F3B87B /* ClubTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubTableViewCell.m; sourceTree = "<group>"; };
 		D68B6F4719F153BE00F3B87B /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
@@ -140,6 +140,14 @@
 				B1340D09FDAC86B4F813599B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D65A005319F7F7D10065E127 /* CoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				D65A005419F7F7D10065E127 /* CoreDataManagerTests.m */,
+			);
+			path = CoreDataTests;
 			sourceTree = "<group>";
 		};
 		D68B6F4119F1534700F3B87B /* ClubTableViewCell */ = {
@@ -397,8 +405,8 @@
 		D6E3883719ED181700189BEB /* JenkinsCITests */ = {
 			isa = PBXGroup;
 			children = (
+				D65A005319F7F7D10065E127 /* CoreDataTests */,
 				D6E3883819ED181700189BEB /* Supporting Files */,
-				D65A005119F7ECA30065E127 /* CoreDataManagerTests.m */,
 			);
 			path = JenkinsCITests;
 			sourceTree = "<group>";
@@ -687,7 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65A005219F7ECA30065E127 /* CoreDataManagerTests.m in Sources */,
+				D65A005519F7F7D10065E127 /* CoreDataManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
