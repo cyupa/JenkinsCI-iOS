@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DataImporter.h"
+#import <Crashlytics/Crashlytics.h>
 
 
 static NSString * const kJSonFileName = @"db";
@@ -25,6 +26,9 @@ static NSString * const kJSonFileType = @"json";
     
     // Checks if the import has been done and if not imports the data
     [self checkImport];
+    
+    // Start Crashlytics
+    [self startCrashlytics];
     
     return YES;
 }
@@ -68,6 +72,17 @@ static NSString * const kJSonFileType = @"json";
     NSError *error =  nil;
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     return jsonData;
+}
+
+#pragma mark - Crashlytics
+
+- (void)startCrashlytics {
+//    [Crashlytics startWithAPIKey:<#(NSString *)#>];
+//#ifdef DEBUG
+//    [[Crashlytics sharedInstance] setDebugMode:YES];
+//#else
+//    [[Crashlytics sharedInstance] setDebugMode:NO];
+//#endif
 }
 
 @end
