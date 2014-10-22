@@ -30,6 +30,15 @@ and
 `Build/Intermediates/YOUR-MAIN-TARGET-NAME.build/Objects-normal/i386'`
 You can find these based on the setting you have in Xcode for Locations.
 
+## Jenkins plugins
+To setup you job, you will need the following plugins:
+
+XCode plugin<br />
+Keychains and Provisioning Profiles Plugin<br />
+Duplicate Code Scanner Plug-in<br />
+Cobertura plugin<br />
+SLOCCount Plugin<br />
+EnvInject Plugin<br />
 
 ## Code metrics tools
 ##### Install Homebrew
@@ -37,7 +46,8 @@ To install Homebrew, simply copy-paste this code into your Terminal and press en
 
 <code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </code>
 
-##### Installing pmd:<br/>`brew install pmd`
+##### Installing pmd:<br/>
+You can download 4.3 from [here](http://sourceforge.net/projects/pmd/files/pmd/4.3/pmd-bin-4.3.zip/download). The latest versions have suffered major changes that aren't supported by the ObjectiveC language definition yet.<br/>
 To be able to make use of PMD you will also need to dowload the PMD Objective-C language definition from [here](https://github.com/jkennedy1980/Objective-C-CPD-Language/blob/master/releases/ObjCLanguage-0.0.7-SNAPSHOT.jar) - courtesy of Josh Kennedy.
 
 ##### Installing sloccount:<br/>`brew install sloccount`
