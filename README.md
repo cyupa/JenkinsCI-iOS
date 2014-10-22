@@ -34,11 +34,14 @@ You can find these based on the setting you have in Xcode for Locations.
 To setup you job, you will need the following plugins:
 
 XCode plugin<br />
+Git plugin<br />
 Keychains and Provisioning Profiles Plugin<br />
 Duplicate Code Scanner Plug-in<br />
 Cobertura plugin<br />
 SLOCCount Plugin<br />
 EnvInject Plugin<br />
+
+To add Jenkins plugins you must go to Jenkins -> Manage Jenkins -> Manage plugins.
 
 ## Code metrics tools
 ##### Install Homebrew
