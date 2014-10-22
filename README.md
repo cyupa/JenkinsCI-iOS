@@ -1,9 +1,9 @@
 JenkinsCI-iOS
 =============
 
-A Jenkins job setup.
+A Jenkins job setup for your XCode project.
 
-Contents: <br/>
+##Contents: <br/>
 [Installing Jenkins](#installing-jenkins)<br />
 [XCode project setup](#xcode-project-setup)<br />
 [Jenkins plugins](#jenkins-plugins)<br />
