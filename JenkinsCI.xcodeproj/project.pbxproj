@@ -55,6 +55,20 @@
 			remoteGlobalIDString = D6E3881719ED181700189BEB;
 			remoteInfo = JenkinsCI;
 		};
+		D68E894C19F8F21200855D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E3881019ED181700189BEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E3881719ED181700189BEB;
+			remoteInfo = JenkinsCI;
+		};
+		D68E894E19F8F21300855D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E3881019ED181700189BEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E3881719ED181700189BEB;
+			remoteInfo = JenkinsCI;
+		};
 		D6E3883519ED181700189BEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D6E3881019ED181700189BEB /* Project object */;
@@ -576,6 +590,8 @@
 				D6E3883619ED181700189BEB /* PBXTargetDependency */,
 				D68E894919F8F0CF00855D77 /* PBXTargetDependency */,
 				D68E894B19F8F0D000855D77 /* PBXTargetDependency */,
+				D68E894D19F8F21200855D77 /* PBXTargetDependency */,
+				D68E894F19F8F21300855D77 /* PBXTargetDependency */,
 			);
 			name = JenkinsCITests;
 			productName = JenkinsCITests;
@@ -727,6 +743,16 @@
 			isa = PBXTargetDependency;
 			target = D6E3881719ED181700189BEB /* JenkinsCI */;
 			targetProxy = D68E894A19F8F0D000855D77 /* PBXContainerItemProxy */;
+		};
+		D68E894D19F8F21200855D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E3881719ED181700189BEB /* JenkinsCI */;
+			targetProxy = D68E894C19F8F21200855D77 /* PBXContainerItemProxy */;
+		};
+		D68E894F19F8F21300855D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E3881719ED181700189BEB /* JenkinsCI */;
+			targetProxy = D68E894E19F8F21300855D77 /* PBXContainerItemProxy */;
 		};
 		D6E3883619ED181700189BEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
