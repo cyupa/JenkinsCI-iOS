@@ -14,6 +14,7 @@
 		D68B6F5119F154A000F3B87B /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F5019F154A000F3B87B /* Club.m */; };
 		D68B6F5419F154B000F3B87B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F5319F154B000F3B87B /* Player.m */; };
 		D68B6F5619F1550400F3B87B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = D68B6F5519F1550400F3B87B /* db.json */; };
+		D68E894519F8EE2300855D77 /* EmptyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E894419F8EE2300855D77 /* EmptyTest.m */; };
 		D6C2F55519F4E2D60060E60D /* DataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F55419F4E2D60060E60D /* DataImporter.m */; };
 		D6C2F57219F551400060E60D /* UIImageView+RoundCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F57119F551400060E60D /* UIImageView+RoundCorners.m */; };
 		D6C2F59E19F672950060E60D /* AddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F57D19F672950060E60D /* AddPlayerViewController.m */; };
@@ -63,6 +64,7 @@
 		D68B6F5219F154B000F3B87B /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		D68B6F5319F154B000F3B87B /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		D68B6F5519F1550400F3B87B /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
+		D68E894419F8EE2300855D77 /* EmptyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyTest.m; sourceTree = "<group>"; };
 		D6C2F55319F4E2D60060E60D /* DataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataImporter.h; sourceTree = "<group>"; };
 		D6C2F55419F4E2D60060E60D /* DataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataImporter.m; sourceTree = "<group>"; };
 		D6C2F57019F551400060E60D /* UIImageView+RoundCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundCorners.h"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			children = (
 				D65A005319F7F7D10065E127 /* CoreDataTests */,
 				D6E3883819ED181700189BEB /* Supporting Files */,
+				D68E894419F8EE2300855D77 /* EmptyTest.m */,
 			);
 			path = JenkinsCITests;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68E894519F8EE2300855D77 /* EmptyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
