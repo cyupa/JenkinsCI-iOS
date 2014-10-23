@@ -198,3 +198,5 @@ Please run this script as such: SSLINCPATH=<path/to/ssl/include> ./configure`
 
 Install OpenSSL via Homebrew (<code>'brew install openssl'</code>) and retry.<br/>
 If that doesn't work, go to /Library/Caches/Homebrew/, unpack the md5sha1sum archive, open it, and run the following command in the Terminal: <code>SSLINCPATH=/usr/local/Cellar/openssl/1.0.1i/include ./configure</code>.
+
+If your build fails with a linker error in the Build step while trying to build and archive (for some reason xcodebuild tries to build the test scheme in the Archive configuration) for some class included in your test case, go to Build Settings and turn Symbols Hidden by Default to NO on your main target.
