@@ -62,7 +62,7 @@ static NSString * const kClubsCellIdentifier = @"_clubCell";
             squadSize = @"One player";
             break;
         default:
-            squadSize = [NSString stringWithFormat:@"%li players", size];
+            squadSize = [NSString stringWithFormat:@"%li players", (long)size];
             break;
     }
     
