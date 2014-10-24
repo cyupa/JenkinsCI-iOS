@@ -14,7 +14,6 @@
 		D68B6F5119F154A000F3B87B /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F5019F154A000F3B87B /* Club.m */; };
 		D68B6F5419F154B000F3B87B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = D68B6F5319F154B000F3B87B /* Player.m */; };
 		D68B6F5619F1550400F3B87B /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = D68B6F5519F1550400F3B87B /* db.json */; };
-		D68E894719F8F06000855D77 /* CoreDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D68E894619F8F06000855D77 /* CoreDataManagerTests.m */; };
 		D6C2F55519F4E2D60060E60D /* DataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F55419F4E2D60060E60D /* DataImporter.m */; };
 		D6C2F57219F551400060E60D /* UIImageView+RoundCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F57119F551400060E60D /* UIImageView+RoundCorners.m */; };
 		D6C2F59F19F672950060E60D /* ClubsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58019F672950060E60D /* ClubsViewController.m */; };
@@ -27,6 +26,8 @@
 		D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59819F672950060E60D /* SquadViewController+TableViewDatasource.m */; };
 		D6C2F5A719F672950060E60D /* SquadViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */; };
 		D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59D19F672950060E60D /* SquadViewController.m */; };
+		D6CB741F19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */; };
+		D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */; };
 		D6E3881E19ED181700189BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3881D19ED181700189BEB /* main.m */; };
 		D6E3885A19ED4FAF00189BEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3885219ED4FAF00189BEB /* AppDelegate.m */; };
 		D6E3886719ED500B00189BEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3886219ED500B00189BEB /* LaunchScreen.xib */; };
@@ -91,7 +92,6 @@
 		D68B6F5219F154B000F3B87B /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		D68B6F5319F154B000F3B87B /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		D68B6F5519F1550400F3B87B /* db.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
-		D68E894619F8F06000855D77 /* CoreDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManagerTests.m; sourceTree = "<group>"; };
 		D6C2F55319F4E2D60060E60D /* DataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataImporter.h; sourceTree = "<group>"; };
 		D6C2F55419F4E2D60060E60D /* DataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataImporter.m; sourceTree = "<group>"; };
 		D6C2F57019F551400060E60D /* UIImageView+RoundCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundCorners.h"; sourceTree = "<group>"; };
@@ -116,6 +116,8 @@
 		D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SquadViewController+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		D6C2F59C19F672950060E60D /* SquadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquadViewController.h; sourceTree = "<group>"; };
 		D6C2F59D19F672950060E60D /* SquadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquadViewController.m; sourceTree = "<group>"; };
+		D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPlayerManagerTests.m; sourceTree = "<group>"; };
+		D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataImportTest.m; sourceTree = "<group>"; };
 		D6E3881819ED181700189BEB /* JenkinsCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E3881C19ED181700189BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E3881D19ED181700189BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -170,7 +172,8 @@
 		D65A005319F7F7D10065E127 /* CoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				D68E894619F8F06000855D77 /* CoreDataManagerTests.m */,
+				D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */,
+				D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */,
 			);
 			path = CoreDataTests;
 			sourceTree = "<group>";
@@ -713,7 +716,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D68E894719F8F06000855D77 /* CoreDataManagerTests.m in Sources */,
+				D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */,
+				D6CB741F19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

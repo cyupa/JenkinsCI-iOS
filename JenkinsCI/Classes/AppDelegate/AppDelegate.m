@@ -10,10 +10,6 @@
 #import "DataImporter.h"
 #import <Crashlytics/Crashlytics.h>
 
-
-static NSString * const kJSonFileName = @"db";
-static NSString * const kJSonFileType = @"json";
-
 @interface AppDelegate ()
 
 @end
@@ -60,19 +56,11 @@ static NSString * const kJSonFileType = @"json";
 - (void)checkImport {
     DataImporter *importer = [[DataImporter alloc] init];
     if (![importer didImportData]) {
-        NSDictionary *jsonData = [self jsonFileData];
-        [importer importDataFromDictionary:jsonData];
+        [importer importData];
     }
 }
 
-- (NSDictionary *)jsonFileData {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:kJSonFileName
-                                                         ofType:kJSonFileType];
-    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error =  nil;
-    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    return jsonData;
-}
+
 
 #pragma mark - Crashlytics
 

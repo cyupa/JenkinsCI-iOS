@@ -33,6 +33,7 @@
 - (void)deleteObject:(NSManagedObject *)object {
     NSManagedObjectContext *context = object.managedObjectContext;
     [context deleteObject:object];
+    object = nil;
 }
 
 @end

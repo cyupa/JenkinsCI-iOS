@@ -12,7 +12,7 @@
 #import "CoreDataPlayerManager.h"
 
 // NSUserDefaults import key
-static NSString * const kDidImportData = @"kDidImportData";
+static NSString * const kDidImportDataKey = @"kDidImportData";
 
 // JSON import keys
 // Club
@@ -29,6 +29,9 @@ static NSString * const kPlayerPosition = @"position";
 static NSString * const kPlayerShirtNumber = @"shirtNumber";
 static NSString * const kPlayerClub = @"club";
 
+// JSON
+static NSString * const kJSonFileName = @"db";
+static NSString * const kJSonFileType = @"json";
 
 @interface DataImporter ()
 
@@ -39,6 +42,7 @@ static NSString * const kPlayerClub = @"club";
 
 
 @implementation DataImporter
+
 
 #pragma mark - Init
 
@@ -57,7 +61,18 @@ static NSString * const kPlayerClub = @"club";
 
 - (BOOL)didImportData {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return [userDefaults boolForKey:kDidImportData];
+    return [userDefaults boolForKey:kDidImportDataKey];
+}
+
+- (void)setDidImportData:(BOOL)didImportData {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:didImportData forKey:kDidImportDataKey];
+    [userDefaults synchronize];
+}
+
+- (void)importData {
+    NSDictionary *dictionary = [self jsonFileData];
+    [self importDataFromDictionary:dictionary];
 }
 
 - (void)importDataFromDictionary:(NSDictionary *)dictionary {
@@ -83,9 +98,7 @@ static NSString * const kPlayerClub = @"club";
         
         if (!error) {
             // Mark data as imported
-            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setObject:[NSNumber numberWithBool:YES] forKey:kDidImportData];
-            [userDefaults synchronize];
+            [weakSelf setDidImportData:YES];
         } else {
             DDLogError(@"CoreData error: %@", error);
         }
@@ -154,6 +167,18 @@ static NSString * const kPlayerClub = @"club";
     Club *club = [self.clubsById objectForKey:clubId];
     player.club = club;
     
+}
+
+
+#pragma mark - JSON file
+
+- (NSDictionary *)jsonFileData {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:kJSonFileName
+                                                         ofType:kJSonFileType];
+    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    return jsonData;
 }
 
 @end

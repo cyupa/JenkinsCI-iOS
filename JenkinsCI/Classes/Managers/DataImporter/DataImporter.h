@@ -9,18 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface DataImporter : NSObject
-/**
- *  Method to check if the import was already done or not.
- *
- *  @return <#return value description#>
- */
-- (BOOL)didImportData;
+
+@property (nonatomic) BOOL didImportData;
 
 /**
  *  Method that will import the players and club infos from an NSDictionary.
  *
- *  @param dictionary NSDictionary containing players and clubs keys.
  */
-- (void)importDataFromDictionary:(NSDictionary *)dictionary;
+- (void)importData;
 
 @end
