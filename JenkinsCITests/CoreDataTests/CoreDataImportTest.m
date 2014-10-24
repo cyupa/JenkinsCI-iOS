@@ -11,10 +11,12 @@
 //  Copyright (c) 2014 Ciprian Redinciuc. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "CoreDataManager.h"
 #import "DataImporter.h"
-
+#import "CoreDataPlayerManager.h"
+#import "CoreDataClubManager.h"
 
 
 @interface CoreDataImportTest : XCTestCase
@@ -22,6 +24,9 @@
 @property   (nonatomic, strong) NSPersistentStoreCoordinator    *coordinator;
 @property   (nonatomic, strong) CoreDataManager                 *manager;
 @property   (nonatomic, strong) DataImporter                    *dataImporter;
+@property   (nonatomic, strong) CoreDataPlayerManager           *playerManager;
+@property   (nonatomic, strong) CoreDataClubManager             *clubManager;
+
 @end
 
 @implementation CoreDataImportTest
@@ -51,7 +56,7 @@
 	if (![[self coordinator] addPersistentStoreWithType:[self storeType] configuration:nil URL:[self storeURL] options:[self storeOptions] error:&error]){
 	    XCTFail(@"Could not add store, %@", error);
 	}
-    
+    // Setup managers
     self.manager = [CoreDataManager sharedInstance];
     self.dataImporter = [[DataImporter alloc] init];
     [self.dataImporter setDidImportData:NO];
@@ -61,6 +66,9 @@
     } else {
         XCTFail(@"The data import should be done at each step to ensure correct results");
     }
+    
+    self.playerManager = [[CoreDataPlayerManager alloc] init];
+    self.clubManager = [[CoreDataClubManager alloc] init];
 }
 
 - (void)tearDown {
@@ -83,6 +91,9 @@
     
     [self.dataImporter setDidImportData:NO];
     self.dataImporter = nil;
+    
+    self.playerManager = nil;
+    self.clubManager = nil;
     
 	[super tearDown];
 }
@@ -125,6 +136,9 @@
 	XCTAssertNoThrow([context executeFetchRequest:fetchRequest error:&error], @"Fetch threw exception.");
 }
 
+
+#pragma mark - Data import
+
 - (void)testImportFalse {
     [self.dataImporter setDidImportData:NO];
     XCTAssertFalse(self.dataImporter.didImportData, @"DataImporter's importData should be false");
@@ -135,6 +149,7 @@
     XCTAssertTrue(self.dataImporter.didImportData, @"DataImporter's importData should be true");
 }
 
+#pragma mark - CoreDataManager tests
 
 - (void)testSingleton {
     CoreDataManager *instanceB = [CoreDataManager sharedInstance];
@@ -189,5 +204,81 @@
     XCTAssertEqual([controller.fetchedObjects count], 4, @"The NSFetchedResultsController should fetch 4 objects.");
 }
 
+#pragma mark - Player Manager tests
+
+- (void)testPlayerCreation {
+    NSString *firstName = @"Ciprian";
+    NSString *lastName = @"Redinciuc";
+    Player *playerObject = [self.playerManager createPlayerWithFirstName:firstName
+                                                                lastName:lastName];
+    XCTAssertNotNil(playerObject, @"The object should not be nil");
+    XCTAssertEqual(playerObject.firstName, firstName, @"The player first name should be equal to firstName");
+    XCTAssertEqual(playerObject.lastName, lastName, @"The player last name should be equal to lastName");
+}
+
+- (void)testPlayerNoPicture {
+    NSString *firstName = @"No";
+    NSString *lastName = @"Picture";
+    Player *playerObject = [self.playerManager createPlayerWithFirstName:firstName
+                                                                lastName:lastName];
+    UIImage *playerImage = [playerObject playerImage];
+    XCTAssertNil(playerImage, @"The player image should be nil");
+}
+
+- (void)testPlayerWithPicture {
+    NSString *firstName = @"Steven";
+    NSString *lastName = @"Gerrard";
+    Player *playerObject = [self.playerManager createPlayerWithFirstName:firstName
+                                                                lastName:lastName];
+    UIImage *playerImage = [playerObject playerImage];
+    XCTAssertNotNil(playerImage, @"The player image should not be nil");
+}
+
+- (void)testPlayerFullName {
+    NSString *firstName = @"Full";
+    NSString *lastName = @"Name";
+    Player *playerObject = [self.playerManager createPlayerWithFirstName:firstName
+                                                                lastName:lastName];
+    
+    NSString *fullName = [playerObject playerFullName];
+    NSString *expected = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+    XCTAssertEqualObjects(fullName, expected, @"The expected full name should be FirstName LastName");
+}
+
+- (void)testPlayerDeletion {
+    NSString *firstName = @"To Be";
+    NSString *lastName = @"Deleted";
+    Player *playerObject = [self.playerManager createPlayerWithFirstName:firstName
+                                                                lastName:lastName];
+    
+    XCTAssertNoThrow([self.playerManager deletePlayer:playerObject]);
+}
+
+#pragma mark - Club Manager tests
+
+- (void)testClubCreation {
+    NSString *clubName = @"Test Club FC";
+    Club *club = [self.clubManager createClubWithName:clubName clubId:@100000];
+    
+    XCTAssertEqualObjects(clubName, club.clubName, @"The names should be equal");
+}
+
+- (void)testClubNoPicture {
+    NSString *clubName = @"No Picture FC";
+    Club *club = [self.clubManager createClubWithName:clubName clubId:@100000];
+    XCTAssertNil(club.logoImage, @"The club should not have an image");
+}
+
+- (void)testClubWithPicture {
+    NSString *clubName = @"Liverpool FC";
+    Club *club = [self.clubManager createClubWithName:clubName clubId:@100000];
+    XCTAssertNotNil(club.logoImage, @"The club should have an image");
+}
+
+- (void)testClubDeletion {
+    NSString *clubName = @"Club to Delete FC";
+    Club *club = [self.clubManager createClubWithName:clubName clubId:@100000];
+    XCTAssertNoThrow([self.clubManager deleteClub:club]);
+}
 
 @end

@@ -26,7 +26,6 @@
 		D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59819F672950060E60D /* SquadViewController+TableViewDatasource.m */; };
 		D6C2F5A719F672950060E60D /* SquadViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */; };
 		D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59D19F672950060E60D /* SquadViewController.m */; };
-		D6CB741F19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */; };
 		D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */; };
 		D6E3881E19ED181700189BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3881D19ED181700189BEB /* main.m */; };
 		D6E3885A19ED4FAF00189BEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3885219ED4FAF00189BEB /* AppDelegate.m */; };
@@ -116,7 +115,6 @@
 		D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SquadViewController+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		D6C2F59C19F672950060E60D /* SquadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquadViewController.h; sourceTree = "<group>"; };
 		D6C2F59D19F672950060E60D /* SquadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquadViewController.m; sourceTree = "<group>"; };
-		D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPlayerManagerTests.m; sourceTree = "<group>"; };
 		D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataImportTest.m; sourceTree = "<group>"; };
 		D6E3881819ED181700189BEB /* JenkinsCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E3881C19ED181700189BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		D65A005319F7F7D10065E127 /* CoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6CB741E19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m */,
 				D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */,
 			);
 			path = CoreDataTests;
@@ -717,7 +714,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */,
-				D6CB741F19FA3C97002FE6CA /* CoreDataPlayerManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
