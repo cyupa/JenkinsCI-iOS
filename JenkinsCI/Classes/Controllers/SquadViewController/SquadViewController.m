@@ -7,7 +7,6 @@
 //
 
 #import "SquadViewController.h"
-#import "SquadViewController+NSFetchedResultsController.h"
 #import "PlayerProfileViewController.h"
 #import "Club.h"
 

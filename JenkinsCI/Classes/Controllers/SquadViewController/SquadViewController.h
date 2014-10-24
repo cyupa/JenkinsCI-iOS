@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataManager.h"
-
+#import "FetchedResultsTableViewController.h"
 @class Club;
 
-@interface SquadViewController : UITableViewController
+@interface SquadViewController : FetchedResultsTableViewController
 
 @property (nonatomic, strong) Club *presentedClub;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;

@@ -24,9 +24,11 @@
 		D6C2F5A419F672950060E60D /* PlayersViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59219F672950060E60D /* PlayersViewController+NSFetchedResultsController.m */; };
 		D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59419F672950060E60D /* PlayersViewController.m */; };
 		D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59819F672950060E60D /* SquadViewController+TableViewDatasource.m */; };
-		D6C2F5A719F672950060E60D /* SquadViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */; };
 		D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59D19F672950060E60D /* SquadViewController.m */; };
 		D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */; };
+		D6CB742619FA50D1002FE6CA /* PlayersViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742519FA50D1002FE6CA /* PlayersViewControllerTests.m */; };
+		D6CB742819FA51CD002FE6CA /* PlayerProfileViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742719FA51CD002FE6CA /* PlayerProfileViewControllerTest.m */; };
+		D6CB742C19FA54B0002FE6CA /* FetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB742B19FA54B0002FE6CA /* FetchedResultsTableViewController.m */; };
 		D6E3881E19ED181700189BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3881D19ED181700189BEB /* main.m */; };
 		D6E3885A19ED4FAF00189BEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E3885219ED4FAF00189BEB /* AppDelegate.m */; };
 		D6E3886719ED500B00189BEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E3886219ED500B00189BEB /* LaunchScreen.xib */; };
@@ -111,11 +113,13 @@
 		D6C2F59419F672950060E60D /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
 		D6C2F59719F672950060E60D /* SquadViewController+TableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SquadViewController+TableViewDatasource.h"; sourceTree = "<group>"; };
 		D6C2F59819F672950060E60D /* SquadViewController+TableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SquadViewController+TableViewDatasource.m"; sourceTree = "<group>"; };
-		D6C2F59A19F672950060E60D /* SquadViewController+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SquadViewController+NSFetchedResultsController.h"; sourceTree = "<group>"; };
-		D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SquadViewController+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		D6C2F59C19F672950060E60D /* SquadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquadViewController.h; sourceTree = "<group>"; };
 		D6C2F59D19F672950060E60D /* SquadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquadViewController.m; sourceTree = "<group>"; };
 		D6CB742219FA44FA002FE6CA /* CoreDataImportTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataImportTest.m; sourceTree = "<group>"; };
+		D6CB742519FA50D1002FE6CA /* PlayersViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewControllerTests.m; sourceTree = "<group>"; };
+		D6CB742719FA51CD002FE6CA /* PlayerProfileViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileViewControllerTest.m; sourceTree = "<group>"; };
+		D6CB742A19FA54B0002FE6CA /* FetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsTableViewController.h; sourceTree = "<group>"; };
+		D6CB742B19FA54B0002FE6CA /* FetchedResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsTableViewController.m; sourceTree = "<group>"; };
 		D6E3881819ED181700189BEB /* JenkinsCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E3881C19ED181700189BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E3881D19ED181700189BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		D6C2F57A19F672950060E60D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D6CB742919FA54B0002FE6CA /* FetchedResultsTableViewController */,
 				D6C2F57E19F672950060E60D /* ClubsViewController */,
 				D6C2F58819F672950060E60D /* PlayerProfileViewController */,
 				D6C2F58B19F672950060E60D /* PlayersViewController */,
@@ -346,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				D6C2F59619F672950060E60D /* Datasource */,
-				D6C2F59919F672950060E60D /* NSFetchedResultsController */,
 				D6C2F59C19F672950060E60D /* SquadViewController.h */,
 				D6C2F59D19F672950060E60D /* SquadViewController.m */,
 			);
@@ -362,13 +366,22 @@
 			path = Datasource;
 			sourceTree = "<group>";
 		};
-		D6C2F59919F672950060E60D /* NSFetchedResultsController */ = {
+		D6CB742419FA50B4002FE6CA /* ControllersTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6C2F59A19F672950060E60D /* SquadViewController+NSFetchedResultsController.h */,
-				D6C2F59B19F672950060E60D /* SquadViewController+NSFetchedResultsController.m */,
+				D6CB742519FA50D1002FE6CA /* PlayersViewControllerTests.m */,
+				D6CB742719FA51CD002FE6CA /* PlayerProfileViewControllerTest.m */,
 			);
-			path = NSFetchedResultsController;
+			path = ControllersTests;
+			sourceTree = "<group>";
+		};
+		D6CB742919FA54B0002FE6CA /* FetchedResultsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB742A19FA54B0002FE6CA /* FetchedResultsTableViewController.h */,
+				D6CB742B19FA54B0002FE6CA /* FetchedResultsTableViewController.m */,
+			);
+			path = FetchedResultsTableViewController;
 			sourceTree = "<group>";
 		};
 		D6E3880F19ED181700189BEB = {
@@ -420,6 +433,7 @@
 		D6E3883719ED181700189BEB /* JenkinsCITests */ = {
 			isa = PBXGroup;
 			children = (
+				D6CB742419FA50B4002FE6CA /* ControllersTests */,
 				D65A005319F7F7D10065E127 /* CoreDataTests */,
 				D6E3883819ED181700189BEB /* Supporting Files */,
 			);
@@ -693,8 +707,8 @@
 				D6C2F5A219F672950060E60D /* PlayerProfileViewController.m in Sources */,
 				D6C2F59F19F672950060E60D /* ClubsViewController.m in Sources */,
 				D6E3881E19ED181700189BEB /* main.m in Sources */,
+				D6CB742C19FA54B0002FE6CA /* FetchedResultsTableViewController.m in Sources */,
 				D6C2F5A419F672950060E60D /* PlayersViewController+NSFetchedResultsController.m in Sources */,
-				D6C2F5A719F672950060E60D /* SquadViewController+NSFetchedResultsController.m in Sources */,
 				D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */,
 				D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */,
 				D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */,
@@ -714,6 +728,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6CB742319FA44FA002FE6CA /* CoreDataImportTest.m in Sources */,
+				D6CB742619FA50D1002FE6CA /* PlayersViewControllerTests.m in Sources */,
+				D6CB742819FA51CD002FE6CA /* PlayerProfileViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

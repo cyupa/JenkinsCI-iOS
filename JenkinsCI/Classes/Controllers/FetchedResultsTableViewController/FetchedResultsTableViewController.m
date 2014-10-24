@@ -1,16 +1,15 @@
 //
-//  SquadViewController+NSFetchedResultsController.m
+//  FetchedResultsTableViewController.m
 //  JenkinsCI
 //
-//  Created by Ciprian Redinciuc on 20/10/14.
+//  Created by Ciprian Redinciuc on 24/10/14.
 //  Copyright (c) 2014 Ciprian Redinciuc. All rights reserved.
 //
 
-#import "SquadViewController+NSFetchedResultsController.h"
-#import "SquadViewController+TableViewDatasource.h"
+#import "FetchedResultsTableViewController.h"
 
-@implementation SquadViewController (NSFetchedResultsController)
 
+@implementation FetchedResultsTableViewController
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
@@ -49,7 +48,7 @@
             [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
             break;
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] forRowAtIndexPath:indexPath];
+            [self.cellConfigurer configureCell:[self.tableView cellForRowAtIndexPath:indexPath] forRowAtIndexPath:indexPath];
             break;
         case NSFetchedResultsChangeMove:
             [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
