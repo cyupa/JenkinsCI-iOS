@@ -8,6 +8,7 @@
 
 #import "PlayersViewController.h"
 #import "PlayerProfileViewController.h"
+#import "PlayersViewController+UITableViewDatasource.h"
 #import "Player.h"
 
 
@@ -50,6 +51,8 @@ static NSString * const kPresentPlayerSegue = @"segue_playersShowPlayer";
                                                                      sectionNameKey:nil
                                                                           ascending:YES
                                                                            delegate:self];
+    
+    self.cellConfigurer = self;
     
     NSError *error = nil;
     [self.fetchedResultsController performFetch:&error];

@@ -8,8 +8,6 @@
 
 #import "ClubsViewController.h"
 
-@interface ClubsViewController (UITableViewDatasource) <UITableViewDataSource>
-
-- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+@interface ClubsViewController (UITableViewDatasource) <UITableViewDataSource, UITableViewCellConfigurer>
 
 @end

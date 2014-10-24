@@ -8,6 +8,7 @@
 
 #import "SquadViewController.h"
 #import "PlayerProfileViewController.h"
+#import "SquadViewController+TableViewDatasource.h"
 #import "Club.h"
 
 static NSString * const kSquadPresentPlayerSegue = @"segue_squadShowPlayer";
@@ -55,7 +56,7 @@ static NSString * const kSquadPresentPlayerSegue = @"segue_squadShowPlayer";
                                                                      sectionNameKey:nil
                                                                           ascending:YES
                                                                            delegate:self];
-    
+    self.cellConfigurer = self;
     NSError *error = nil;
     [self.fetchedResultsController performFetch:&error];
     if (error) {

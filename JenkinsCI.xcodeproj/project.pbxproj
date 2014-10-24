@@ -18,7 +18,6 @@
 		D6C2F57219F551400060E60D /* UIImageView+RoundCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F57119F551400060E60D /* UIImageView+RoundCorners.m */; };
 		D6C2F59F19F672950060E60D /* ClubsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58019F672950060E60D /* ClubsViewController.m */; };
 		D6C2F5A019F672950060E60D /* ClubsViewController+UITableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58319F672950060E60D /* ClubsViewController+UITableViewDatasource.m */; };
-		D6C2F5A119F672950060E60D /* ClubsViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58719F672950060E60D /* ClubsViewController+NSFetchedResultsController.m */; };
 		D6C2F5A219F672950060E60D /* PlayerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58A19F672950060E60D /* PlayerProfileViewController.m */; };
 		D6C2F5A319F672950060E60D /* PlayersViewController+UITableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58E19F672950060E60D /* PlayersViewController+UITableViewDatasource.m */; };
 		D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59419F672950060E60D /* PlayersViewController.m */; };
@@ -98,8 +97,6 @@
 		D6C2F58019F672950060E60D /* ClubsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubsViewController.m; sourceTree = "<group>"; };
 		D6C2F58219F672950060E60D /* ClubsViewController+UITableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ClubsViewController+UITableViewDatasource.h"; sourceTree = "<group>"; };
 		D6C2F58319F672950060E60D /* ClubsViewController+UITableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ClubsViewController+UITableViewDatasource.m"; sourceTree = "<group>"; };
-		D6C2F58619F672950060E60D /* ClubsViewController+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ClubsViewController+NSFetchedResultsController.h"; sourceTree = "<group>"; };
-		D6C2F58719F672950060E60D /* ClubsViewController+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ClubsViewController+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		D6C2F58919F672950060E60D /* PlayerProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProfileViewController.h; sourceTree = "<group>"; };
 		D6C2F58A19F672950060E60D /* PlayerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileViewController.m; sourceTree = "<group>"; };
 		D6C2F58D19F672950060E60D /* PlayersViewController+UITableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayersViewController+UITableViewDatasource.h"; sourceTree = "<group>"; };
@@ -264,7 +261,6 @@
 				D6C2F58019F672950060E60D /* ClubsViewController.m */,
 				D6C2F58119F672950060E60D /* Datasource */,
 				D6C2F58419F672950060E60D /* Delegate */,
-				D6C2F58519F672950060E60D /* NSFetchedResultsController */,
 			);
 			path = ClubsViewController;
 			sourceTree = "<group>";
@@ -283,15 +279,6 @@
 			children = (
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		D6C2F58519F672950060E60D /* NSFetchedResultsController */ = {
-			isa = PBXGroup;
-			children = (
-				D6C2F58619F672950060E60D /* ClubsViewController+NSFetchedResultsController.h */,
-				D6C2F58719F672950060E60D /* ClubsViewController+NSFetchedResultsController.m */,
-			);
-			path = NSFetchedResultsController;
 			sourceTree = "<group>";
 		};
 		D6C2F58819F672950060E60D /* PlayerProfileViewController */ = {
@@ -686,7 +673,6 @@
 				D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */,
 				D6C2F5A019F672950060E60D /* ClubsViewController+UITableViewDatasource.m in Sources */,
 				D68B6F5119F154A000F3B87B /* Club.m in Sources */,
-				D6C2F5A119F672950060E60D /* ClubsViewController+NSFetchedResultsController.m in Sources */,
 				D6E3887919ED5F8600189BEB /* CoreDataEntityManager.m in Sources */,
 				D68B6F5419F154B000F3B87B /* Player.m in Sources */,
 				D6E3886D19ED546200189BEB /* Model.xcdatamodeld in Sources */,

@@ -8,9 +8,6 @@
 
 #import "SquadViewController.h"
 
-@interface SquadViewController (TableViewDatasource) <UITableViewDataSource>
-
-- (void)configureCell:(UITableViewCell *)cell
-    forRowAtIndexPath:(NSIndexPath *)indexPath;
+@interface SquadViewController (TableViewDatasource) <UITableViewDataSource, UITableViewCellConfigurer>
 
 @end

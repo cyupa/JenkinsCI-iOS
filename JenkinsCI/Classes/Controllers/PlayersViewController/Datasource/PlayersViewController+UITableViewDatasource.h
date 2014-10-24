@@ -8,8 +8,6 @@
 
 #import "PlayersViewController.h"
 
-@interface PlayersViewController (UITableViewDatasource)
-
-- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+@interface PlayersViewController (UITableViewDatasource) <UITableViewDataSource, UITableViewCellConfigurer>
 
 @end

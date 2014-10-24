@@ -7,8 +7,8 @@
 //
 
 #import "ClubsViewController.h"
-#import "ClubsViewController+NSFetchedResultsController.h"
 #import "SquadViewController.h"
+#import "ClubsViewController+UITableViewDatasource.h"
 
 static NSString * const kClubFetchEntityName = @"Club";
 static NSString * const kClubFetchSortingKey = @"clubName";
@@ -46,6 +46,8 @@ static NSString * const kPresentSquadSegueIdentifier = @"segue_clubsShowSquad";
                                                                      sectionNameKey:nil
                                                                           ascending:YES
                                                                            delegate:self];
+    
+    self.cellConfigurer = self;
     
     NSError *error = nil;
     [self.fetchedResultsController performFetch:&error];
