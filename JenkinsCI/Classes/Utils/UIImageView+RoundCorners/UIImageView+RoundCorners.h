@@ -10,6 +10,14 @@
 
 @interface UIImageView (RoundCorners)
 
+/**
+ *  Applies a corner radius to a given UIImageView with a border
+ *  with and color.
+ *
+ *  @param radius Radius value.
+ *  @param border Border width.
+ *  @param color  Border color.
+ */
 - (void)applyCornerRadius:(CGFloat)radius
               borderWidth:(CGFloat)border
               borderColor:(UIColor *)color;

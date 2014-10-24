@@ -22,7 +22,11 @@
 - (Player *)createPlayerWithFirstName:(NSString *)firstName
                              lastName:(NSString *)lastName;
 
-
+/**
+ *  Deletes a Player entity from its managed object context.
+ *
+ *  @param player Player instance.
+ */
 - (void)deletePlayer:(Player *)player;
 
 @end

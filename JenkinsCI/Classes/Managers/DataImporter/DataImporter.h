@@ -16,6 +16,11 @@
  */
 - (BOOL)didImportData;
 
+/**
+ *  Method that will import the players and club infos from an NSDictionary.
+ *
+ *  @param dictionary NSDictionary containing players and clubs keys.
+ */
 - (void)importDataFromDictionary:(NSDictionary *)dictionary;
 
 @end
