@@ -21,7 +21,6 @@
 		D6C2F5A119F672950060E60D /* ClubsViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58719F672950060E60D /* ClubsViewController+NSFetchedResultsController.m */; };
 		D6C2F5A219F672950060E60D /* PlayerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58A19F672950060E60D /* PlayerProfileViewController.m */; };
 		D6C2F5A319F672950060E60D /* PlayersViewController+UITableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F58E19F672950060E60D /* PlayersViewController+UITableViewDatasource.m */; };
-		D6C2F5A419F672950060E60D /* PlayersViewController+NSFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59219F672950060E60D /* PlayersViewController+NSFetchedResultsController.m */; };
 		D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59419F672950060E60D /* PlayersViewController.m */; };
 		D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59819F672950060E60D /* SquadViewController+TableViewDatasource.m */; };
 		D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C2F59D19F672950060E60D /* SquadViewController.m */; };
@@ -105,8 +104,6 @@
 		D6C2F58A19F672950060E60D /* PlayerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerProfileViewController.m; sourceTree = "<group>"; };
 		D6C2F58D19F672950060E60D /* PlayersViewController+UITableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayersViewController+UITableViewDatasource.h"; sourceTree = "<group>"; };
 		D6C2F58E19F672950060E60D /* PlayersViewController+UITableViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlayersViewController+UITableViewDatasource.m"; sourceTree = "<group>"; };
-		D6C2F59119F672950060E60D /* PlayersViewController+NSFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayersViewController+NSFetchedResultsController.h"; sourceTree = "<group>"; };
-		D6C2F59219F672950060E60D /* PlayersViewController+NSFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlayersViewController+NSFetchedResultsController.m"; sourceTree = "<group>"; };
 		D6C2F59319F672950060E60D /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
 		D6C2F59419F672950060E60D /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
 		D6C2F59719F672950060E60D /* SquadViewController+TableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SquadViewController+TableViewDatasource.h"; sourceTree = "<group>"; };
@@ -311,7 +308,6 @@
 			children = (
 				D6C2F58C19F672950060E60D /* Datasource */,
 				D6C2F58F19F672950060E60D /* Delegate */,
-				D6C2F59019F672950060E60D /* NSFetchedResultsController */,
 				D6C2F59319F672950060E60D /* PlayersViewController.h */,
 				D6C2F59419F672950060E60D /* PlayersViewController.m */,
 			);
@@ -332,15 +328,6 @@
 			children = (
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		D6C2F59019F672950060E60D /* NSFetchedResultsController */ = {
-			isa = PBXGroup;
-			children = (
-				D6C2F59119F672950060E60D /* PlayersViewController+NSFetchedResultsController.h */,
-				D6C2F59219F672950060E60D /* PlayersViewController+NSFetchedResultsController.m */,
-			);
-			path = NSFetchedResultsController;
 			sourceTree = "<group>";
 		};
 		D6C2F59519F672950060E60D /* SquadViewController */ = {
@@ -694,7 +681,6 @@
 				D6C2F59F19F672950060E60D /* ClubsViewController.m in Sources */,
 				D6E3881E19ED181700189BEB /* main.m in Sources */,
 				D6CB742C19FA54B0002FE6CA /* FetchedResultsTableViewController.m in Sources */,
-				D6C2F5A419F672950060E60D /* PlayersViewController+NSFetchedResultsController.m in Sources */,
 				D6C2F5A619F672950060E60D /* SquadViewController+TableViewDatasource.m in Sources */,
 				D6C2F5A819F672950060E60D /* SquadViewController.m in Sources */,
 				D6C2F5A519F672950060E60D /* PlayersViewController.m in Sources */,
