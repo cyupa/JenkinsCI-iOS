@@ -1,11 +1,11 @@
 JenkinsCI-iOS
 =============
 
-A Jenkins job setup for your XCode project.
+A Jenkins job setup for your Xcode project.
 
 ## Contents: <br/>
 [Installing Jenkins](#installing-jenkins)<br />
-[XCode project setup](#xcode-project-setup)<br />
+[Xcode project setup](#xcode-project-setup)<br />
 [Jenkins plugins](#jenkins-plugins)<br />
 [Installing code metrics tools](#installing-code-metrics-tools)<br />
 [Setting up the job](#setting-up-the-job)<br />
@@ -20,15 +20,15 @@ To run Jenkins go to `/Applications/Jenkins` and run the `jenkins.war` file. Mak
 
 After that, you can access the Jenkins Dashboard using the following URL: [http://localhost:8080](http://localhost:8080)
 
-## XCode project setup
+## Xcode project setup
 
-First, go to your project target from the left top corner of XCode, click on the target and select "Manage Schemes".
-There you should check the "Shared" option for your XCode project (do not check shared for the Pods project).<br/>
+First, go to your project target from the left top corner of Xcode, click on the target and select "Manage Schemes".
+There you should check the "Shared" option for your Xcode project (do not check shared for the Pods project).<br/>
 Target - > Manage schemes - > Check “Shared”
 
 Then, in the project's Build Settings turn on Generate Test Coverage Files and Instrument Program Flow for the Debug configuration on your main target and for both Debug an Release for your test target.
 
-To take advantage of the generated files you need to set the Build Products and Intermediates to be saved in a folder relative to the Workspace. You can do this by accessing XCode Preferences -> Locations -> Custom -> Relative to Workspace.
+To take advantage of the generated files you need to set the Build Products and Intermediates to be saved in a folder relative to the Workspace. You can do this by accessing Xcode Preferences -> Locations -> Custom -> Relative to Workspace.
 
 
 To check if everything it's OK you can build the project and check the following folders for .gcno and .gcda files
@@ -40,7 +40,7 @@ You can find these based on the setting you have in Xcode for Locations.
 ## Jenkins plugins
 To setup you job, you will need the following plugins:
 
-XCode plugin<br />
+Xcode plugin<br />
 Git plugin<br />
 Keychains and Provisioning Profiles Plugin<br />
 Duplicate Code Scanner Plug-in<br />
@@ -147,10 +147,10 @@ java -Xmx512m -classpath /usr/local/Cellar/pmd/4.3/lib/pmd-4.3.jar:/usr/local/Ce
 
 If the `test-reports/ios-cpd-output.xml` is generated you can publish the results by adding a Publish duplicate code analisys results in the Post build section.
 
-#### XCode build
+#### Xcode build
 
 If everything is fine until this point, you can move on to the buil & distribute part of the job.
-Go on and add an XCode build step. This plugin will invoke the xcodebuild command line tool and you can add all the build parameters here. Keep in mind that I'm using CocoaPods.
+Go on and add an Xcode build step. This plugin will invoke the xcodebuild command line tool and you can add all the build parameters here. Keep in mind that I'm using CocoaPods.
 
 In this case:
 *   Target:                                   JenkinsCI
