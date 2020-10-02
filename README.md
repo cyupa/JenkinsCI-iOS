@@ -13,7 +13,7 @@ A Jenkins job setup for your Xcode project.
 
 ## Installing Jenkins
 
-Download Jenkins from here: http://jenkins-ci.org/content/thank-you-downloading-os-x-installer <br/>
+Download Jenkins from here: https://www.jenkins.io/download/weekly/macos/ <br/>
 I would recommend that the install should be made under the administrator user and not let the Jenkins installer create it's own user. That will generate issues when trying to access the keychain.
 
 To run Jenkins go to `/Applications/Jenkins` and run the `jenkins.war` file. Make sure you have the latest Java JDK installed.
